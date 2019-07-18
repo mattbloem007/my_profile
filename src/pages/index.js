@@ -1,33 +1,36 @@
 import React from 'react';
+import { Link, graphql } from 'gatsby'
+
 
 import Layout from '../components/Layout';
 
 import Scroll from '../components/Scroll';
 
-import pic1 from '../assets/images/pic01.jpg';
-import pic2 from '../assets/images/pic02.jpg';
-import pic3 from '../assets/images/pic03.jpg';
+import pic1 from '../assets/images/react.jpg';
+import pic2 from '../assets/images/wordpress.png';
+import pic3 from '../assets/images/seo.jpg';
 import config from '../../config';
-const IndexPage = () => (
+
+class IndexPage extends React.Component {
+  render() {
+    return (
   <Layout>
     <section id="banner">
       <div className="inner">
         <h2>{config.heading}</h2>
         <p>{config.subHeading}</p>
-        <ul className="actions special">
-          <li>
-            <Scroll type="id" element="one">
-              <a href="/#" className="button primary">
-                Explore
-              </a>
-            </Scroll>
-          </li>
-        </ul>
+        {/**<ul className="actions special">
+                  <li>
+                    <Scroll type="id" element="one">
+                      <a href="/#" className="button primary">
+                        Explore
+                      </a>
+                    </Scroll>
+                  </li>
+                </ul>*/}
       </div>
       <Scroll type="id" element="one">
-        <a href="#one" className="more">
-          Learn More
-        </a>
+      <Link to="/#" className="more">Learn More</Link>
       </Scroll>
     </section>
 
@@ -35,32 +38,25 @@ const IndexPage = () => (
       <div className="inner">
         <header className="major">
           <h2>
-            Arcu aliquet vel lobortis ata nisl
-            <br />
-            eget augue amet aliquet nisl cep donec
+            Optimal, dynamic and beautiful websites
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
-            eleifend
-            <br />
-            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
-            ullamcorper.
+            Have a fully operational website built to your specifications. I am using the latest technologies that optimise the way your website flows. ReactJS + Wordpress + SEO =  A Unique, powerful site.
           </p>
         </header>
         <ul className="icons major">
           <li>
-            <span className="icon fa-gem major style1">
-              <span className="label">Lorem</span>
+            <span className="icon major style1">
+            <i size={100} className="fab fa-react major style1"></i>
             </span>
           </li>
           <li>
-            <span className="icon fa-heart major style2">
-              <span className="label">Ipsum</span>
+            <span className="icon major style1">
+            <i className="fab fa-wordpress major style1"></i>
             </span>
           </li>
           <li>
-            <span className="icon solid fa-code major style3">
-              <span className="label">Dolor</span>
+            <span className="icon fa-code major style1">
             </span>
           </li>
         </ul>
@@ -74,13 +70,14 @@ const IndexPage = () => (
         </div>
         <div className="content">
           <h2>
-            Magna primis lobortis
-            <br />
-            sed ullamcorper
+            Why ReactJS?
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+            ReactJS is highly adaptable, with endless possibilities. 
+            <br/>
+            Large scale web applications are incredibly fast and optimal, 
+            <br/>
+            capable of loading real-time data instantly while reloading pages.
           </p>
         </div>
       </section>
@@ -90,13 +87,16 @@ const IndexPage = () => (
         </div>
         <div className="content">
           <h2>
-            Tortor dolore feugiat
-            <br />
-            elementum magna
+            Wordpress as a Content Managment System (CMS)
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+            Easy for all clients to create their own content. 
+            <br/>
+            Reliable, familiar and simple to learn. 
+            <br /> 
+            Great for adding in plugins to the client's desire.
+            <br />
+            Can be accessed from  any computer for updates and editing.
           </p>
         </div>
       </section>
@@ -106,13 +106,14 @@ const IndexPage = () => (
         </div>
         <div className="content">
           <h2>
-            Augue eleifend aliquet
-            <br />
-            sed condimentum
+            Whole Site SEO optimised
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+            Allow your site to be seen worldwide across the web.
+            <br/> 
+            Bring more traffic and awareness to your site.
+            <br /> 
+            Although it's an extra cost, an optimised site with SEO will get your money back as your site analytics sky rocket.
           </p>
         </div>
       </section>
@@ -121,56 +122,63 @@ const IndexPage = () => (
     <section id="three" className="wrapper style3 special">
       <div className="inner">
         <header className="major">
-          <h2>Accumsan mus tortor nunc aliquet</h2>
+          <h2>Work Experience</h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
-            eleifend
+            Web and application development is fun. My work speaks for itself.
             <br />
-            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
-            ullamcorper.
+            This is what I have been up to after achieving my degree in Computer Science.
           </p>
         </header>
         <ul className="features">
-          <li className="icon fa-paper-plane">
-            <h3>Arcu accumsan</h3>
+          <li className="icon fa-laptop">
+            <h3>Application Developer - Xicon Solutions</h3>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+              Xicon Solutions and I have developed a tool that assists in integrating an Organ of State's supplier database with that of the National Treasury's CSD (Central Supplier Database). 
+              <br/>
+              <br/>
+              According to section 217 of the constitution, all Organs of State must be CSD compliant, hence 
+              <br/>
+              Xicon Solutions' tool offers an effortless solution for Organs of State. 
+              <br/>
+              <br/>
+              The Central Supplier Database (CSD) SAP Integration Solution consists of three separate solutions: 
+              <br/>
+              the CSD & SAP Supplier number Match and Sync; 
+              <br/>
+              the Real-time CSD Status checks from SAP; 
+              <br/>
+              and the bulk batch file download and sync. 
+              <br/>
+              <br/>
+              It is designed to always keep a company's database accurate, updated and in sync with the CSD
+              <br/>
+              <br/>
+              Technologies used: ReactJS, NodeJS, Docker, mysql, elasticsearch, SAP
             </p>
           </li>
           <li className="icon solid fa-laptop">
-            <h3>Ac Augue Eget</h3>
+            <h3>Web Application Developer - IOS Group</h3>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+              Developed a functioning website for IOS Group to capture, store and interact with all sports clubs in the whole of South Africa.
+              <br/>
+               Retaining all the information of the different clubs and allowing one to know more detail about sports clubs in their region.
+               <br/>
+               <br/>
+                Used React and Node.js to implement a website to capture the data of all the learners that are part of IOS Group.
+                <br/>
+                <br/>
+                Developed a Learning management system for IOS Group to create courses for students who want to take a course to become a coach in a certain field of sport. On this platform courses are uploaded and enrolled by learners
             </p>
           </li>
           <li className="icon solid fa-code">
-            <h3>Mus Scelerisque</h3>
+            <h3>Website Developer - Private Client </h3>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
-            </p>
-          </li>
-          <li className="icon solid fa-headphones-alt">
-            <h3>Mauris Imperdiet</h3>
-            <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
-            </p>
-          </li>
-          <li className="icon fa-heart">
-            <h3>Aenean Primis</h3>
-            <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
-            </p>
-          </li>
-          <li className="icon fa-flag">
-            <h3>Tortor Ut</h3>
-            <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+              Below is an example of a website that I am currently working on for a client. 
+              <br/>
+              <br />
+              You are more than welcome to browse what is there to get a feel of my work:
+
+              <a href="https://lah-hallah.netlify.com/"> Click here </a> 
             </p>
           </li>
         </ul>
@@ -178,29 +186,32 @@ const IndexPage = () => (
     </section>
 
     <section id="cta" className="wrapper style4">
-      <div className="inner">
-        <header>
-          <h2>Arcue ut vel commodo</h2>
-          <p>
-            Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet
-            eleifend fringilla.
-          </p>
-        </header>
-        <ul className="actions stacked">
-          <li>
-            <a href="/#" className="button fit primary">
-              Activate
-            </a>
-          </li>
-          <li>
-            <a href="/#" className="button fit">
-              Learn More
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+          <div className="inner">
+            <header>
+              <h2>Hire me</h2>
+              <p>
+                Contact me for more details.
+                <br/>
+                <br />
+                 I am available to help share your vision with the world.
+                <br />
+                <br />
+                WhatsApp: 083 293 5904
+                <br />
+                <br />
+                Email: <a href="mailto:mattb007@gmail.com"> mattb007@gmail.com </a>
+              </p>
+            </header>
+            <ul className="actions stacked">
+              <li>
+              <Link to="/Generic" className="button fit primary">About Me</Link>
+              </li>
+            </ul>
+          </div>
+        </section>
   </Layout>
-);
+)
+  }
+}
 
 export default IndexPage;
