@@ -26,7 +26,7 @@ module.exports = {
       //         hostingWPCOM: false,
       //     },
       //   },
-        {
+       // {
     //   resolve: `gatsby-source-graphql`,
     //   options: {
     //     // This type will contain remote schema Query type
