@@ -19,13 +19,13 @@ module.exports = {
         icon: config.manifestIcon, // This path is relative to the root of the site.
       },
     },
-      { resolve: `gatsby-source-wordpress`, 
-          options: {
-              baseUrl: `localhost/wordpress/index.php`,
-              protocol: `http`,
-              hostingWPCOM: false,
-          },
-        },
+      // { resolve: `gatsby-source-wordpress`, 
+      //     options: {
+      //         baseUrl: `localhost/wordpress/index.php`,
+      //         protocol: `http`,
+      //         hostingWPCOM: false,
+      //     },
+      //   },
         {
       resolve: `gatsby-source-graphql`,
       options: {
