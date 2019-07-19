@@ -1,15 +1,15 @@
 module.exports = {
-  siteTitle: 'Matthew Bloemetje Profile', // <title>
+  siteTitle: 'Matthew Bloemetje Freelance Web Developer', // <title>
   manifestName: 'Spectral',
   manifestShortName: 'Landing', // max 12 characters
-  manifestStartUrl: '/',
+  manifestStartUrl: '/matthew-bloemetje-freelance-web-developer',
   manifestBackgroundColor: '#663399',
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
   pathPrefix: `/gatsby-starter-spectral/`, // This path is subpath of your hosting https://domain/portfolio
   heading: 'Matthew Bloemetje',
-  subHeading: 'Freelance Website Developer',
+  subHeading: 'Freelance Web Developer',
   // social
   socialLinks: [
     {

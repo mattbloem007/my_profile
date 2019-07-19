@@ -4,6 +4,8 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
+    siteURL: config.manifestStartUrl,
+    description: "Hire Matthew as a freelance web developer. Get a fast and efficient website created for your business or brand. Matthew is a quick, skilled web developer."
   },
   plugins: [
     'gatsby-plugin-react-helmet',

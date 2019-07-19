@@ -38,10 +38,10 @@ class IndexPage extends React.Component {
       <div className="inner">
         <header className="major">
           <h2>
-            Optimal, dynamic and beautiful websites
+            Freelance Web Developer - Dynamic and stunning websites
           </h2>
           <p>
-            Have a fully operational website built to your specifications. I am using the latest technologies that optimise the way your website flows. ReactJS + Wordpress + SEO =  A Unique, powerful site.
+            Have a fully operational website built to your specifications. I am using the latest technologies that optimize the way your website flows. ReactJS + Wordpress + SEO =  A Unique, Dynamic website.
           </p>
         </header>
         <ul className="icons major">
@@ -75,9 +75,9 @@ class IndexPage extends React.Component {
           <p>
             ReactJS is highly adaptable, with endless possibilities. 
             <br/>
-            Large scale web applications are incredibly fast and optimal, 
+            Large scale web applications or websites are incredibly fast and optimal, 
             <br/>
-            capable of loading real-time data instantly while reloading pages.
+            capable of loading real-time data instantly.
           </p>
         </div>
       </section>
@@ -106,14 +106,14 @@ class IndexPage extends React.Component {
         </div>
         <div className="content">
           <h2>
-            Whole Site SEO optimised
+            Whole Site SEO optimized
           </h2>
           <p>
-            Allow your site to be seen worldwide across the web.
+            Allow your website to be seen worldwide across the internet.
             <br/> 
-            Bring more traffic and awareness to your site.
+            Bring more traffic and awareness to your website.
             <br /> 
-            Although it's an extra cost, an optimised site with SEO will get your money back as your site analytics sky rocket.
+            Although it is an extra cost, an optimized site with SEO will get your money back as your website analytics sky rocket!
           </p>
         </div>
       </section>
